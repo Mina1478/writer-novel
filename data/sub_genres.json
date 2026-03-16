@@ -1,0 +1,402 @@
+[
+    {
+        "name": "Hậu cung",
+        "description": "Nhân vật chính (thường là nam) có mối quan hệ tình cảm hoặc chung sống với nhiều nhân vật khác giới. Tập trung vào việc quản lý các mối quan hệ phức tạp và sự cạnh tranh giữa các thành viên."
+    },
+    {
+        "name": "1v1",
+        "description": "Mối quan hệ chính chỉ gồm một cặp đôi duy nhất xuyên suốt tác phẩm, cam kết chung thủy và tập trung sâu vào sự phát triển tình cảm của hai người."
+    },
+    {
+        "name": "NP",
+        "description": "Nhiều người yêu (N-Persons), nhân vật chính có mối quan hệ tình cảm đồng thời với nhiều người khác, thường không theo mô hình một vợ một chồng truyền thống."
+    },
+    {
+        "name": "Nữ phẫn nam trang",
+        "description": "Nhân vật nữ cải trang thành nam giới vì lý do bối cảnh, bảo vệ bản thân hoặc nhiệm vụ. Tạo ra các tình huống hiểu lầm và kịch tính trong tương tác xã hội."
+    },
+    {
+        "name": "Nam phẫn nữ trang",
+        "description": "Nhân vật nam cải trang thành nữ giới. Thường xuất hiện trong các bối cảnh hài hước, thâm nhập hoặc sở thích cá nhân, tạo ra các tình huống dở khóc dở cười."
+    },
+    {
+        "name": "Xuyên không",
+        "description": "Nhân vật từ thế giới hoặc thời đại này vượt qua không gian/thời gian để đến một thế giới hoặc thời đại khác. Thường tận dụng kiến thức hiện đại để thay đổi vận mệnh."
+    },
+    {
+        "name": "Xuyên sách",
+        "description": "Nhân vật xuyên vào một cuốn tiểu thuyết đã biết trước cốt truyện, thường đóng vai phản diện hoặc nhân vật phụ và cố gắng thay đổi kết cục bi thảm của mình."
+    },
+    {
+        "name": "Trọng sinh",
+        "description": "Nhân vật chết đi và được sống lại ở một thời điểm trong quá quá khứ của chính mình, mang theo ký ức và kinh nghiệm từ kiếp trước để sửa chữa sai lầm."
+    },
+    {
+        "name": "Hệ thống",
+        "description": "Nhân vật sở hữu một thực thể trí tuệ hoặc giao diện điện tử cung cấp nhiệm vụ, phần thưởng và khả năng đặc biệt để thăng tiến sức mạnh nhanh chóng."
+    },
+    {
+        "name": "Bàn tay vàng",
+        "description": "Chỉ những khả năng, vật phẩm hoặc may mắn cực lớn mà tác giả ban cho nhân vật chính, giúp họ vượt qua mọi nghịch cảnh một cách dễ dàng và áp đảo đối thủ."
+    },
+    {
+        "name": "Không gian tùy thân",
+        "description": "Nhân vật sở hữu một không gian bí mật có thể lưu trữ vật phẩm, trồng trọt hoặc tu luyện, thường liên kết trực tiếp với cơ thể hoặc vật dụng mang theo."
+    },
+    {
+        "name": "Linh tuyền",
+        "description": "Một nguồn nước thần kỳ có khả năng chữa lành vết thương, tăng cường sức khỏe hoặc nâng cao tư chất tu luyện, thường nằm trong không gian tùy thân."
+    },
+    {
+        "name": "Đọc tâm thuật",
+        "description": "Khả năng nghe được suy nghĩ thầm kín của người khác, tạo ra lợi thế tuyệt đối trong giao tiếp, đàm phán và phát hiện âm mưu."
+    },
+    {
+        "name": "Vô địch lưu",
+        "description": "Nhân vật chính ngay từ đầu đã có sức mạnh tuyệt đối, không có đối thủ xứng tầm, tập trung vào việc thể hiện sức mạnh và giải quyết vấn đề theo cách áp đảo."
+    },
+    {
+        "name": "Cẩu đạo",
+        "description": "Nhân vật chính cực kỳ cẩn trọng, ẩn mình, tránh xa rắc rối và chỉ hành động khi nắm chắc phần thắng, ưu tiên sự an toàn và trường thọ lên hàng đầu."
+    },
+    {
+        "name": "Nhiệt huyết",
+        "description": "Tập trung vào sự nỗ lực không ngừng, tình bạn, lòng dũng cảm và các cuộc chiến đấu đầy cảm xúc để đạt được mục tiêu cao cả."
+    },
+    {
+        "name": "Hài hước",
+        "description": "Sử dụng các tình huống trớ trêu, lời thoại hóm hỉnh và các nhân vật kỳ lạ để tạo ra tiếng cười và không khí thư giãn cho độc giả."
+    },
+    {
+        "name": "Sảng văn",
+        "description": "Loại truyện nhấn mạnh vào sự thỏa mãn của độc giả thông qua việc nhân vật chính liên tục thành công, tát mặt đối thủ và nhận được phần thưởng hậu hĩnh."
+    },
+    {
+        "name": "Ngọt sủng",
+        "description": "Tập trung vào mối quan hệ tình cảm vô cùng ngọt ngào, ít mâu thuẫn, nhân vật chính luôn được che chở và yêu thương hết mực."
+    },
+    {
+        "name": "Ngược luyến",
+        "description": "Khai thác những đau khổ, dằn vặt và hiểu lầm trong tình yêu, lấy nước mắt của độc giả thông qua những tình tiết bi kịch."
+    },
+    {
+        "name": "Gương vỡ lại lành",
+        "description": "Hai người yêu nhau vì lý do nào đó mà chia tay, sau một thời gian xa cách lại gặp nhau và quyết định hàn gắn mối quan hệ cũ."
+    },
+    {
+        "name": "Cưới trước yêu sau",
+        "description": "Cặp đôi kết hôn vì thỏa thuận, nhiệm vụ hoặc ép buộc, sau đó trong quá trình chung sống mới dần hiểu nhau và phát sinh tình cảm chân thành."
+    },
+    {
+        "name": "Oan gia ngõ hẹp",
+        "description": "Hai nhân vật ban đầu có ác cảm hoặc thường xuyên tranh cãi, nhưng qua các biến cố lại trở nên gắn bó và yêu nhau."
+    },
+    {
+        "name": "Thanh mai trúc mã",
+        "description": "Đề tài về những cặp bạn thân từ thuở nhỏ, cùng nhau lớn lên và dần phát triển tình cảm từ tình bạn thành tình yêu nam nữ."
+    },
+    {
+        "name": "Hào môn thế gia",
+        "description": "Bối cảnh giới thượng lưu, các gia tộc giàu có với những cuộc chiến tranh giành quyền lực, tài sản và các mối quan hệ xã hội phức tạp."
+    },
+    {
+        "name": "Tổng tài",
+        "description": "Nhân vật chính là lãnh đạo cấp cao của một tập đoàn lớn, giàu có, quyền lực và thường mang phong thái lạnh lùng hoặc bá đạo."
+    },
+    {
+        "name": "Minh tinh",
+        "description": "Khai thác cuộc sống và sự nghiệp của những người nổi tiếng trong giới nghệ thuật, từ sự rực rỡ trên sân khấu đến những góc khuất đời tư."
+    },
+    {
+        "name": "Giới giải trí",
+        "description": "Bối cảnh xoay quanh showbiz, các quy tắc ngầm, sự cạnh tranh giữa các nghệ sĩ và quá trình vươn tới đỉnh cao sự nghiệp."
+    },
+    {
+        "name": "Vườn trường",
+        "description": "Bối cảnh học đường, xoay quanh cuộc sống của học sinh, sinh viên với những kỷ niệm trong sáng, tình bạn và tình khôi ngây ngô."
+    },
+    {
+        "name": "Học bá",
+        "description": "Nhân vật có thành tích học tập xuất sắc, trí tuệ siêu việt, thường giải quyết các vấn đề bằng kiến thức và sự thông minh."
+    },
+    {
+        "name": "Võng du",
+        "description": "Bối cảnh trong các trò chơi trực tuyến, kết hợp giữa đời thực và thế giới ảo, tập trung vào việc cày cấp, lập đội và các giải đấu game."
+    },
+    {
+        "name": "E-sports",
+        "description": "Thể thao điện tử chuyên nghiệp, tập trung vào tinh thần đồng đội, sự khổ luyện và hành trình chinh phục các chức vô địch thế giới."
+    },
+    {
+        "name": "Livestream",
+        "description": "Nhân vật chính là người phát trực tiếp trên mạng, tương tác với khán giả và thực hiện các nội dung sáng tạo để kiếm tiền và danh tiếng."
+    },
+    {
+        "name": "Mỹ thực",
+        "description": "Tập trung vào ẩm thực, quá trình nấu nướng, các món ăn ngon và cảm xúc chia sẻ thông qua những bữa cơm."
+    },
+    {
+        "name": "Nông trại",
+        "description": "Bối cảnh vùng quê hoặc không gian riêng biệt nơi nhân vật chính thực hiện việc trồng trọt, chăn nuôi và xây dựng cuộc sống thanh bình."
+    },
+    {
+        "name": "Điền văn",
+        "description": "Truyện có nhịp chậm, tập trung vào cuộc sống đời thường, làm ruộng, gia đình và những chuyện nhỏ nhặt bình dị nhưng ấm áp."
+    },
+    {
+        "name": "Nuôi con",
+        "description": "Tập trung vào quá trình chăm sóc, giáo dục và chứng kiến sự trưởng thành của những đứa trẻ, thường mang màu sắc gia đình và chữa lành."
+    },
+    {
+        "name": "Làm giàu",
+        "description": "Ghi lại hành trình khởi nghiệp, kinh doanh từ bàn tay trắng đến khi trở nên giàu có nhờ sự thông minh và nỗ lực của nhân vật."
+    },
+    {
+        "name": "Cung đấu",
+        "description": "Những cuộc tranh đoạt sủng ái và quyền lực chốn hậu cung của các phi tần, sử dụng mưu kế và sự sắc sảo để tồn tại."
+    },
+    {
+        "name": "Gia đấu",
+        "description": "Mâu thuẫn và tranh chấp quyền lợi giữa các thành viên trong một gia đình hoặc gia tộc lớn, thường liên quan đến vợ lẽ, con thứ."
+    },
+    {
+        "name": "Quyền mưu",
+        "description": "Tập trung vào các chiến lược chính trị, mưu đồ chính trị và các cuộc đấu trí đỉnh cao tại triều đình hoặc các tổ chức quyền lực."
+    },
+    {
+        "name": "Nữ cường",
+        "description": "Nhân vật chính là nữ giới có tính cách mạnh mẽ, độc lập, có năng lực vượt trội và không phụ thuộc vào nam giới."
+    },
+    {
+        "name": "Nam cường",
+        "description": "Nhân vật chính là nam giới cực kỳ bản lĩnh, có khí chất lãnh đạo và sức mạnh nội tại lớn lao."
+    },
+    {
+        "name": "Song khiết",
+        "description": "Cả hai nhân vật chính đều chưa từng có quan hệ tình cảm hay thể xác với bất kỳ ai khác trước khi gặp nhau, đề cao sự thuần khiết."
+    },
+    {
+        "name": "Phế Sài",
+        "description": "Nhân vật ban đầu bị coi là vô dụng, kém cỏi, bị coi thường nhưng sau đó gặp kỳ ngộ và nỗ lực để vươn lên trở thành kẻ mạnh."
+    },
+    {
+        "name": "Thiên tài",
+        "description": "Sở hữu tiềm năng bẩm sinh cực lớn, học một hiểu mười, thường vượt xa những người cùng trang lứa về mọi mặt."
+    },
+    {
+        "name": "Từ hôn",
+        "description": "Tình tiết nhân vật bị đối phương hủy bỏ hôn ước công khai, tạo ra động lực để nhân vật nỗ lực thay đổi và quay lại chứng minh giá trị bản thân."
+    },
+    {
+        "name": "Linh khí khôi phục",
+        "description": "Bối cảnh thế giới hiện đại hoặc cổ đại đột ngột xuất hiện nguồn năng lượng siêu nhiên, khiến thực vật, động vật và con người bắt đầu tiến hóa."
+    },
+    {
+        "name": "Mạt thế",
+        "description": "Bối cảnh thế giới bên bờ vực diệt vong do thảm họa, dịch bệnh hoặc thây ma, tập trung vào sự sinh tồn và bản chất con người trong nghịch cảnh."
+    },
+    {
+        "name": "Cơ giáp",
+        "description": "Sử dụng các robot khổng lồ điều khiển bởi con người để chiến đấu trong bối cảnh khoa học viễn tưởng hoặc tương lai."
+    },
+    {
+        "name": "Tinh tế",
+        "description": "Bối cảnh ngoài không gian, du hành giữa các vì sao, các nền văn minh thiên hà và công nghệ vượt bậc của tương lai."
+    },
+    {
+        "name": "ABO",
+        "description": "Phân loại con người dựa trên thuộc tính sinh học Alpha (mạnh mẽ, thống trị), Beta (bình thường), và Omega (nhu mì, sinh sản), tạo ra các quy tắc xã hội đặc biệt."
+    },
+    {
+        "name": "Người sói",
+        "description": "Tập trung vào bộ tộc người sói với các phân cấp về sức mạnh, bản năng hoang dã và mối quan hệ giữa người sói với con người hoặc ma cà rồng."
+    },
+    {
+        "name": "Ma cà rồng",
+        "description": "Khai thác thế giới của những sinh vật bất tử khát máu, vẻ đẹp bí ẩn, sự quý tộc và những lời nguyền lâu đời."
+    },
+    {
+        "name": "Tây huyễn",
+        "description": "Huyền huyễn phương Tây với rồng, yêu tinh, pháp sư, hiệp sĩ và bối cảnh trung cổ huyền ảo."
+    },
+    {
+        "name": "Ma pháp",
+        "description": "Hệ thống sức mạnh dựa trên việc sử dụng các vòng chú pháp, các nguyên tố thiên nhiên hoặc quyền năng phép thuật bí ẩn."
+    },
+    {
+        "name": "Kiếm ma",
+        "description": "Sự kết hợp giữa kỹ năng sử dụng kiếm thuật điêu luyện và sức mạnh phép thuật, tạo ra những chiến binh đa năng và mạnh mẽ."
+    },
+    {
+        "name": "Pháp sư",
+        "description": "Nhân vật chuyên về việc sử dụng gậy phép, đọc thần chú và điều khiển các nguồn năng lượng siêu nhiên từ xa."
+    },
+    {
+        "name": "Giả heo ăn hổ",
+        "description": "Nhân vật chính cố tình che giấu thực lực, giả vờ yếu đuối để lừa đối thủ chủ quan, sau đó mới thể hiện sức mạnh thật sự để lật ngược tình thế."
+    },
+    {
+        "name": "Bi kịch",
+        "description": "Truyện có kết thúc không có hậu hoặc quá trình diễn biến đầy đau thương, mất mát, để lại ấn tượng sâu sắc và buồn bã."
+    },
+    {
+        "name": "Chữa lành",
+        "description": "Những câu chuyện nhẹ nhàng, ấm áp giúp xoa dịu tâm hồn độc giả, khơi dậy niềm tin vào cuộc sống và những điều tốt đẹp."
+    },
+    {
+        "name": "Hắc ám",
+        "description": "Khai thác những góc khuất tăm tối, sự tàn độc, không khoan nhượng của nhân vật và xã hội, thường có nhịp độ căng thẳng và lạnh lùng."
+    },
+    {
+        "name": "Gothic",
+        "description": "Phong cách mang hơi hướng cổ điển, u ám, bí ẩn với bối cảnh lâu đài cũ, hầm mộ và những bí mật gia tộc rùng rợn."
+    },
+    {
+        "name": "Tâm lý",
+        "description": "Tập trung sâu vào diễn biến tâm trạng, sự biến đổi tính cách và những đấu tranh nội tâm phức tạp của nhân vật."
+    },
+    {
+        "name": "Tâm thần phân liệt",
+        "description": "Nhân vật có sự chia tách về tâm trí, tạo ra những ảo giác hoặc hành vi không kiểm soát, dẫn đến các tình huống kịch tính và khó đoán."
+    },
+    {
+        "name": "Đa nhân cách",
+        "description": "Một cơ thể tồn tại nhiều danh tính khác nhau với ký ức và tính cách riêng biệt, tạo ra những xung đột nội tại gay gắt."
+    },
+    {
+        "name": "Trinh thám",
+        "description": "Quá trình điều tra, phá án, giải mã các câu đố hóc búa để tìm ra sự thật đằng sau những tội ác bí ẩn."
+    },
+    {
+        "name": "Phá án",
+        "description": "Tập trung vào các vụ án cụ thể, kỹ thuật khám nghiệm và suy luận logic để vạch trần thủ phạm."
+    },
+    {
+        "name": "Đạo mộ",
+        "description": "Khám phá các ngôi mộ cổ, đối mặt với các bẫy rập, sinh vật kỳ bí và tìm kiếm những báu vật dân gian bị lãng quên."
+    },
+    {
+        "name": "Cương thi",
+        "description": "Khai thác hình tượng xác sống truyền thống của Á Đông, các phương pháp trấn yểm, đạo sĩ và những câu chuyện tâm linh huyền bí."
+    },
+    {
+        "name": "Quy tắc quái đàm",
+        "description": "Bối cảnh nơi mọi người phải tuân thủ nghiêm ngặt các quy tắc kỳ lạ để sống sót, thường mang yếu tố kinh dị và căng thẳng tột độ."
+    },
+    {
+        "name": "Vô hạn lưu",
+        "description": "Nhân vật chính bị đưa vào chuỗi các thế giới hoặc trò chơi nhiệm vụ khác nhau, phải hoàn thành để tích điểm và sống sót."
+    },
+    {
+        "name": "Mau xuyên",
+        "description": "Nhân vật xuyên qua rất nhiều thế giới nhỏ trong thời gian ngắn để thực hiện các nhiệm vụ chuyên biệt như trả thù, tìm tình yêu."
+    },
+    {
+        "name": "Thực dân",
+        "description": "Bối cảnh khai phá miền đất mới, xây dựng thuộc địa hoặc các cuộc đấu tranh giành độc lập khỏi ách áp bức."
+    },
+    {
+        "name": "Chế tạo",
+        "description": "Nhân vật tập trung vào việc nghiên cứu, phát minh và sản xuất các thiết bị, vũ khí hoặc vật phẩm công nghệ cao để thay đổi thế giới."
+    },
+    {
+        "name": "Lĩnh chúa",
+        "description": "Quản lý một vùng lãnh thổ, từ việc xây dựng cơ sở hạ tầng đến việc tuyển quân, phát triển kinh tế và bảo vệ thần dân."
+    },
+    {
+        "name": "Trồng trọt",
+        "description": "Nhấn mạnh vào kỹ thuật canh tác, lai tạo giống cây trồng và tận hưởng thành quả từ việc chăm sóc đất đai."
+    },
+    {
+        "name": "Câu cá",
+        "description": "Một chủ đề mang tính giải trí cao, miêu tả chi tiết kỹ thuật câu và những kỳ ngộ khi thu được những \"chiến lợi phẩm\" bất ngờ."
+    },
+    {
+        "name": "Nuôi thú",
+        "description": "Xoay quanh việc thuần hóa và chăm sóc các loại linh thú, sủng vật, coi chúng như những người bạn đồng hành trung thành."
+    },
+    {
+        "name": "Pokemon",
+        "description": "Bối cảnh đồng nhân hoặc lấy cảm hứng từ thế giới Pokemon, tập trung vào việc thu phục và huấn luyện các quái thú túi để thi đấu."
+    },
+    {
+        "name": "Anime",
+        "description": "Lấy bối cảnh hoặc phong cách từ các bộ phim hoạt hình Nhật Bản nổi tiếng, thường có hệ thống sức mạnh và logic đặc trưng."
+    },
+    {
+        "name": "Harry Potter",
+        "description": "Đồng nhân về thế giới phù thủy của J.K. Rowling, với các ngôi nhà phép thuật, đũa phép và cuộc chiến chống lại hắc ám."
+    },
+    {
+        "name": "Marvel",
+        "description": "Khai thác thế giới của các siêu anh hùng với sức mạnh phi thường, công nghệ tương lai và những cuộc chiến bảo vệ Trái Đất."
+    },
+    {
+        "name": "Biển sao",
+        "description": "Bối cảnh vũ trụ bao la với những hành trình khám phá, các thiên hà xa xôi và sự nhỏ bé của con người trước không gian."
+    },
+    {
+        "name": "Truyền thuyết đô thị",
+        "description": "Những câu chuyện kinh dị hoặc bí ẩn xảy ra ngay trong lòng các thành phố hiện đại, gắn liền với các tin đồn và địa danh cụ thể."
+    },
+    {
+        "name": "Cổ đại",
+        "description": "Bối cảnh lịch sử xa xưa với những phong tục tập quán, lễ nghi và các cuộc sống của con người thời kỳ trước công nghiệp."
+    },
+    {
+        "name": "Dân quốc",
+        "description": "Giai đoạn lịch sử đầu thế kỷ 20 với sự giao thoa giữa cũ và mới, các cuộc cách mạng và không khí thời đại đặc trưng."
+    },
+    {
+        "name": "Thập niên 70",
+        "description": "Tập trung vào cuộc sống khó khăn nhưng chân thành của những năm 1970, thường gắn liền với thanh niên tri thức về nông thôn."
+    },
+    {
+        "name": "Thập niên 80",
+        "description": "Giai đoạn cải cách mở cửa, khởi đầu của sự năng động kinh tế và những thay đổi lớn lao trong đời sống xã hội."
+    },
+    {
+        "name": "Thập niên 90",
+        "description": "Sự bùng nổ của công nghệ sơ khai, nhạc pop và tinh thần khao khát khẳng định bản thân của thế hệ mới."
+    },
+    {
+        "name": "Dị thế",
+        "description": "Thế giới khác hoàn toàn so với địa cầu, có luật lệ, sinh vật và hệ thống xã hội hoàn toàn mới lạ."
+    },
+    {
+        "name": "Đại lục",
+        "description": "Tập trung vào bối cảnh vùng đất rộng lớn với nhiều quốc gia, chủng tộc và những cuộc chiến tranh giành cương thổ."
+    },
+    {
+        "name": "Bộ lạc",
+        "description": "Cuộc sống cộng đồng nguyên thủy, gắn liền với săn bắn, hái lượm và những tín ngưỡng thần linh sơ khai."
+    },
+    {
+        "name": "Nguyên thủy",
+        "description": "Xoay quanh giai đoạn khai sinh của loài người, việc tìm ra lửa, công cụ đá và quá trình phát triển sơ khai nhất."
+    },
+    {
+        "name": "Tu tiên",
+        "description": "Hành trình tu luyện rèn luyện cơ thể và linh hồn để đạt tới sự trường thọ và sức mạnh của thần tiên."
+    },
+    {
+        "name": "Trả thù",
+        "description": "Động lực chính của nhân vật là tìm cách bắt những kẻ đã gây ra đau khổ cho mình phải trả giá, thường có những mưu kế thâm sâu."
+    },
+    {
+        "name": "Pháo hôi",
+        "description": "Nhân vật ban đầu chỉ là vật hy sinh làm nền cho nhân vật chính trong cốt truyện, nhưng sau đó đã tự mình vươn lên thay đổi số phận."
+    },
+    {
+        "name": "Vai ác",
+        "description": "Nhân vật đóng vai phản diện trong cốt truyện, thường có góc nhìn mới lạ về công lý và cái ác."
+    },
+    {
+        "name": "Tiên tri",
+        "description": "Khả năng nhìn thấy trước tương lai, giúp nhân vật chuẩn bị cho các biến cố hoặc cố gắng thay đổi dòng thời gian."
+    },
+    {
+        "name": "Phép thuật",
+        "description": "Hệ thống quyền năng kỳ bí dựa trên ý chí, các nguyên tố hoặc các thực thể siêu nhiên để tác động vào thực tại."
+    }
+]

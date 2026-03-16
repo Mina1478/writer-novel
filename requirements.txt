@@ -1,0 +1,10 @@
+# AI小说创作工具Pro - 核心依赖
+gradio>=4.0.0
+pandas>=2.0.0
+openai>=1.0.0
+python-docx>=1.0.0
+
+# 可选依赖（用于文件解析）
+PyMuPDF>=1.23.0  # PDF支持
+ebooklib>=0.18  # EPUB支持
+beautifulsoup4>=4.12.0  # EPUB支持
