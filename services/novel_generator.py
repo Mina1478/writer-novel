@@ -12,10 +12,10 @@ from typing import List, Dict, Optional, Tuple
 from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
-from api_client import get_api_client
-from config import get_config
+from services.api_client import get_api_client
+from core.config import get_config
 from locales.i18n import t
-from database import get_db
+from core.database import get_db
 
 logger = logging.getLogger(__name__)
 
@@ -99,9 +99,9 @@ class OutlineParser:
         chapter_count = 0
         # Hỗ trợ nhiều định dạng phác thảo phổ biến và thử nhiều biểu thức chính quy
         patterns = [
-            r'第\s*(\d+)\s*章[：:\s]*([^\-—–]+)[-—–]\s*(.+)',
+            r'(?:第\s*|Chương\s*|Chapter\s*|Hồi\s*|Phần\s*)(\d+)(?:\s*章)?[：:\s]+([^\-—–]+)[-—–]\s*(.+)',
             r'^(\d+)[\).:\s]+([^\-—–]+)[-—–]\s*(.+)',
-            r'第\s*(\d+)\s*章[:：]\s*(.+)',
+            r'(?:第\s*|Chương\s*|Chapter\s*|Hồi\s*|Phần\s*)(\d+)(?:\s*章)?[：:\s]+(.+)',
         ]
 
         for line in lines:
@@ -175,8 +175,8 @@ class OutlineParser:
         return "\n".join(lines)
 
 
-from genre_manager import GenreManager
-from sub_genre_manager import SubGenreManager
+from services.genre_manager import GenreManager
+from services.sub_genre_manager import SubGenreManager
 
 class NovelGenerator:
     """máy phát điện mới"""
@@ -442,6 +442,9 @@ class NovelGenerator:
             context_prompt=context_prompt
         )
 
+        if custom_prompt:
+            prompt += f"\n\n[Yêu cầu bổ sung của tác giả]:\n{custom_prompt}"
+
         sys_prompt = t("prompts.chapter_system")
         
         messages = [
@@ -521,6 +524,9 @@ class NovelGenerator:
             continuity_prompt=continuity_prompt,
             context_prompt=context_prompt
         )
+
+        if custom_prompt:
+            prompt += f"\n\n[Yêu cầu bổ sung của tác giả]:\n{custom_prompt}"
 
         messages = [
             {"role": "system", "content": t("prompts.chapter_system")},
@@ -1066,7 +1072,7 @@ def load_generation_cache(project_id: str) -> Tuple[Optional[Dict], str]:
             return None, t("generator.cache_not_found")
 
         cache_data = json.loads(row["data"])
-        logger.info(f"Cache loaded from database: {project_id}")
+        logger.info(f"Cache loaded from core.database: {project_id}")
         return cache_data, t("generator.cache_load_success")
     except Exception as e:
         logger.error(f"Cache load failed: {e}")
@@ -1244,7 +1250,7 @@ def load_chapter_summaries(project_id: str) -> Tuple[List[Dict], str]:
             return [], t("generator.summary_dir_not_found")
 
         summaries = [{"chapter_num": row["chapter_num"], "summary": row["summary"], "generated_at": row["generated_at"]} for row in rows]
-        logger.info(f"Loaded {len(summaries)} chapter summaries from database")
+        logger.info(f"Loaded {len(summaries)} chapter summaries from core.database")
         return summaries, t("generator.summary_load_done", count=len(summaries))
     except Exception as e:
         logger.error(f"Load chapter summaries failed: {e}")

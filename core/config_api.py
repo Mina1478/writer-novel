@@ -8,9 +8,9 @@ Tác giả: Huyễn Thành
 import json
 from typing import Dict, List, Tuple, Any
 from dataclasses import asdict
-from config import Backend, get_config
-from api_client import get_api_client, reinit_api_client
-from logger import get_logger
+from core.config import Backend, get_config
+from services.api_client import get_api_client, reinit_api_client
+from core.logger import get_logger
 from locales.i18n import t
 
 logger = get_logger("ConfigAPI")

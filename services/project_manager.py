@@ -13,9 +13,9 @@ from typing import List, Dict, Optional, Tuple
 from datetime import datetime
 from pathlib import Path
 
-from novel_generator import NovelProject, Chapter
+from services.novel_generator import NovelProject, Chapter
 from locales.i18n import t
-from database import get_db
+from core.database import get_db
 
 logger = logging.getLogger(__name__)
 
@@ -194,7 +194,7 @@ class ProjectManager:
                 )
                 project.chapters.append(chapter)
             
-            logger.info(f"Project loaded from database: {project_id}")
+            logger.info(f"Project loaded from core.database: {project_id}")
             return project, t("project_manager.load_success")
         
         except Exception as e:
@@ -271,7 +271,7 @@ class ProjectManager:
             if cursor.rowcount == 0:
                 return False, t("project_manager.delete_not_found", id=project_id)
             
-            logger.info(f"Project deleted from database: {project_id}")
+            logger.info(f"Project deleted from core.database: {project_id}")
             return True, t("project_manager.delete_success")
         
         except Exception as e:
@@ -329,3 +329,11 @@ class ProjectManager:
 def get_project_manager() -> ProjectManager:
     """Nhận phiên bản quản lý dự án"""
     return ProjectManager()
+
+def list_project_titles():
+    """Lấy danh sách tiêu đề dự án"""
+    try:
+        projects = ProjectManager.list_projects()
+        return [p["title"] for p in projects]
+    except Exception:
+        return []

@@ -17,9 +17,9 @@ import logging
 from openai import OpenAI, RateLimitError, APIError, AuthenticationError, APIConnectionError
 import pickle
 
-from config import get_config, Backend
+from core.config import get_config, Backend
 from locales.i18n import t
-from database import get_db
+from core.database import get_db
 
 logger = logging.getLogger(__name__)
 

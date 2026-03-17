@@ -12,7 +12,7 @@ from datetime import datetime
 import hashlib
 import logging
 from locales.i18n import t
-from database import get_db
+from core.database import get_db
 
 logger = logging.getLogger(__name__)
 
@@ -341,7 +341,7 @@ class ConfigManager:
                 self.last_modified = mod_row["value"]
             
             if rows or gen_row:
-                logger.info("Config loaded from database")
+                logger.info("Config loaded from core.database")
             else:
                 logger.info("No config in database, using defaults")
                 self._init_default()

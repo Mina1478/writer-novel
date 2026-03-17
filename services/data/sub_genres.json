@@ -1,0 +1,402 @@
+[
+    {
+        "name": "Hậu cung",
+        "description": ""
+    },
+    {
+        "name": "1v1",
+        "description": ""
+    },
+    {
+        "name": "NP",
+        "description": ""
+    },
+    {
+        "name": "Nữ phẫn nam trang",
+        "description": ""
+    },
+    {
+        "name": "Nam phẫn nữ trang",
+        "description": ""
+    },
+    {
+        "name": "Xuyên không",
+        "description": ""
+    },
+    {
+        "name": "Xuyên sách",
+        "description": ""
+    },
+    {
+        "name": "Trọng sinh",
+        "description": ""
+    },
+    {
+        "name": "Hệ thống",
+        "description": ""
+    },
+    {
+        "name": "Bàn tay vàng",
+        "description": ""
+    },
+    {
+        "name": "Không gian tùy thân",
+        "description": ""
+    },
+    {
+        "name": "Linh tuyền",
+        "description": ""
+    },
+    {
+        "name": "Đọc tâm thuật",
+        "description": ""
+    },
+    {
+        "name": "Vô địch lưu",
+        "description": ""
+    },
+    {
+        "name": "Cẩu đạo",
+        "description": ""
+    },
+    {
+        "name": "Nhiệt huyết",
+        "description": ""
+    },
+    {
+        "name": "Hài hước",
+        "description": ""
+    },
+    {
+        "name": "Sảng văn",
+        "description": ""
+    },
+    {
+        "name": "Ngọt sủng",
+        "description": ""
+    },
+    {
+        "name": "Ngược luyến",
+        "description": ""
+    },
+    {
+        "name": "Gương vỡ lại lành",
+        "description": ""
+    },
+    {
+        "name": "Cưới trước yêu sau",
+        "description": ""
+    },
+    {
+        "name": "Oan gia ngõ hẹp",
+        "description": ""
+    },
+    {
+        "name": "Thanh mai trúc mã",
+        "description": ""
+    },
+    {
+        "name": "Hào môn thế gia",
+        "description": ""
+    },
+    {
+        "name": "Tổng tài",
+        "description": ""
+    },
+    {
+        "name": "Minh tinh",
+        "description": ""
+    },
+    {
+        "name": "Giới giải trí",
+        "description": ""
+    },
+    {
+        "name": "Vườn trường",
+        "description": ""
+    },
+    {
+        "name": "Học bá",
+        "description": ""
+    },
+    {
+        "name": "Võng du",
+        "description": ""
+    },
+    {
+        "name": "E-sports",
+        "description": ""
+    },
+    {
+        "name": "Livestream",
+        "description": ""
+    },
+    {
+        "name": "Mỹ thực",
+        "description": ""
+    },
+    {
+        "name": "Nông trại",
+        "description": ""
+    },
+    {
+        "name": "Điền văn",
+        "description": ""
+    },
+    {
+        "name": "Nuôi con",
+        "description": ""
+    },
+    {
+        "name": "Làm giàu",
+        "description": ""
+    },
+    {
+        "name": "Cung đấu",
+        "description": ""
+    },
+    {
+        "name": "Gia đấu",
+        "description": ""
+    },
+    {
+        "name": "Quyền mưu",
+        "description": ""
+    },
+    {
+        "name": "Nữ cường",
+        "description": ""
+    },
+    {
+        "name": "Nam cường",
+        "description": ""
+    },
+    {
+        "name": "Song khiết",
+        "description": ""
+    },
+    {
+        "name": "Phế Sài",
+        "description": ""
+    },
+    {
+        "name": "Thiên tài",
+        "description": ""
+    },
+    {
+        "name": "Từ hôn",
+        "description": ""
+    },
+    {
+        "name": "Linh khí khôi phục",
+        "description": ""
+    },
+    {
+        "name": "Mạt thế",
+        "description": ""
+    },
+    {
+        "name": "Cơ giáp",
+        "description": ""
+    },
+    {
+        "name": "Tinh tế",
+        "description": ""
+    },
+    {
+        "name": "ABO",
+        "description": ""
+    },
+    {
+        "name": "Người sói",
+        "description": ""
+    },
+    {
+        "name": "Ma cà rồng",
+        "description": ""
+    },
+    {
+        "name": "Tây huyễn",
+        "description": ""
+    },
+    {
+        "name": "Ma pháp",
+        "description": ""
+    },
+    {
+        "name": "Kiếm ma",
+        "description": ""
+    },
+    {
+        "name": "Pháp sư",
+        "description": ""
+    },
+    {
+        "name": "Giả heo ăn hổ",
+        "description": ""
+    },
+    {
+        "name": "Bi kịch",
+        "description": ""
+    },
+    {
+        "name": "Chữa lành",
+        "description": ""
+    },
+    {
+        "name": "Hắc ám",
+        "description": ""
+    },
+    {
+        "name": "Gothic",
+        "description": ""
+    },
+    {
+        "name": "Tâm lý",
+        "description": ""
+    },
+    {
+        "name": "Tâm thần phân liệt",
+        "description": ""
+    },
+    {
+        "name": "Đa nhân cách",
+        "description": ""
+    },
+    {
+        "name": "Trinh thám",
+        "description": ""
+    },
+    {
+        "name": "Phá án",
+        "description": ""
+    },
+    {
+        "name": "Đạo mộ",
+        "description": ""
+    },
+    {
+        "name": "Cương thi",
+        "description": ""
+    },
+    {
+        "name": "Quy tắc quái đàm",
+        "description": ""
+    },
+    {
+        "name": "Vô hạn lưu",
+        "description": ""
+    },
+    {
+        "name": "Mau xuyên",
+        "description": ""
+    },
+    {
+        "name": "Thực dân",
+        "description": ""
+    },
+    {
+        "name": "Chế tạo",
+        "description": ""
+    },
+    {
+        "name": "Lĩnh chúa",
+        "description": ""
+    },
+    {
+        "name": "Trồng trọt",
+        "description": ""
+    },
+    {
+        "name": "Câu cá",
+        "description": ""
+    },
+    {
+        "name": "Nuôi thú",
+        "description": ""
+    },
+    {
+        "name": "Pokemon",
+        "description": ""
+    },
+    {
+        "name": "Anime",
+        "description": ""
+    },
+    {
+        "name": "Harry Potter",
+        "description": ""
+    },
+    {
+        "name": "Marvel",
+        "description": ""
+    },
+    {
+        "name": "Biển sao",
+        "description": ""
+    },
+    {
+        "name": "Truyền thuyết đô thị",
+        "description": ""
+    },
+    {
+        "name": "Cổ đại",
+        "description": ""
+    },
+    {
+        "name": "Dân quốc",
+        "description": ""
+    },
+    {
+        "name": "Thập niên 70",
+        "description": ""
+    },
+    {
+        "name": "Thập niên 80",
+        "description": ""
+    },
+    {
+        "name": "Thập niên 90",
+        "description": ""
+    },
+    {
+        "name": "Dị thế",
+        "description": ""
+    },
+    {
+        "name": "Đại lục",
+        "description": ""
+    },
+    {
+        "name": "Bộ lạc",
+        "description": ""
+    },
+    {
+        "name": "Nguyên thủy",
+        "description": ""
+    },
+    {
+        "name": "Tu tiên",
+        "description": ""
+    },
+    {
+        "name": "Trả thù",
+        "description": ""
+    },
+    {
+        "name": "Pháo hôi",
+        "description": ""
+    },
+    {
+        "name": "Vai ác",
+        "description": ""
+    },
+    {
+        "name": "Tiên tri",
+        "description": ""
+    },
+    {
+        "name": "Phép thuật",
+        "description": ""
+    }
+]
