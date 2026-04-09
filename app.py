@@ -106,13 +106,6 @@ def main():
     # Tạo UI
     app = create_main_ui()
 
-    # Tải CSS
-    custom_css = ""
-    css_path = Path("custom.css")
-    if css_path.exists():
-        with open(css_path, 'r', encoding='utf-8') as f:
-            custom_css = f.read()
-
     # Khởi động
     logger.info(t("app.gradio_start", port=WEB_PORT))
     app.queue(default_concurrency_limit=10).launch(

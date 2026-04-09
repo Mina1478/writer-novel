@@ -15,6 +15,8 @@ from functools import wraps
 import logging
 from openai import OpenAI, RateLimitError, APIError, AuthenticationError, APIConnectionError
 import pickle
+import random
+import re
 
 from core.config import get_config, Backend
 from locales.i18n import t
@@ -296,7 +298,6 @@ class APIClient:
         retry_count = 0
         base_wait = 1.0
         
-        import random
 
         while retry_count < max_retries:
             client_info = self._get_next_client(retry_count)
@@ -388,7 +389,6 @@ class APIClient:
                             response_str = str(response)
                             
                             # Thử tìm content='...'
-                            import re
                             content_match = re.search(r"content=(?:'|\")((?:.|\n)*?)(?:'|\"),\s*refusal", response_str)
                             if content_match:
                                 content = content_match.group(1).replace("\\n", "\n").replace("\\'", "'")
@@ -537,7 +537,7 @@ class APIClient:
 
         retry_count = 0
         base_wait = 1.0
-        import random
+
 
         while retry_count < max_retries:
             client_info = self._get_next_client(retry_count)

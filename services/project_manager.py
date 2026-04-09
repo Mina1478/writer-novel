@@ -161,7 +161,7 @@ class ProjectManager:
                 sg_str = "[]"
             try:
                 sg_list = json.loads(sg_str) if sg_str else []
-            except:
+            except (json.JSONDecodeError, TypeError, ValueError):
                 sg_list = []
                 
             # Xây dựng lại dự án

@@ -10,10 +10,30 @@ from services.style_manager import StyleManager
 from core.state import app_state
 
 def build_settings_tab():
+    from core.auth import has_password, verify_password, set_password
     with gr.Tab(t("tabs.settings")):
         gr.Markdown(f"### {t('settings.header')}")
 
-        with gr.Tabs():
+        is_locked = has_password()
+        
+        with gr.Column(visible=is_locked) as login_col:
+            gr.Markdown("#### 🔒 Bảng điều khiển bảo mật")
+            gr.Markdown("Cài đặt hệ thống đang được bảo vệ bằng mật khẩu.")
+            with gr.Row():
+                login_pwd = gr.Textbox(label="Vui lòng nhập mật khẩu", type="password", scale=4)
+                login_btn = gr.Button("Xác nhận", variant="primary", scale=1)
+            login_msg = gr.Markdown("")
+
+        with gr.Tabs(visible=not is_locked) as settings_tabs:
+            def on_login(pwd):
+                if verify_password(pwd):
+                    return gr.update(visible=False), gr.update(visible=True), ""
+                else:
+                    return gr.update(), gr.update(), "❌ Mật khẩu không chính xác!"
+                    
+            login_btn.click(fn=on_login, inputs=[login_pwd], outputs=[login_col, settings_tabs, login_msg])
+            login_pwd.submit(fn=on_login, inputs=[login_pwd], outputs=[login_col, settings_tabs, login_msg])
+            
             # Sub-tab: Quản lý giao diện API
             with gr.Tab(t("settings.tab_backends")):
                 gr.Markdown(f"### {t('settings.backends_header')}")
@@ -466,3 +486,26 @@ def build_settings_tab():
                 style_add_btn.click(fn=on_style_add, inputs=[style_name_input, style_desc_input], outputs=[style_op_status, style_select])
                 style_update_btn.click(fn=on_style_update, inputs=[style_select, style_name_input, style_desc_input], outputs=[style_op_status, style_select])
                 style_delete_btn.click(fn=on_style_delete, inputs=[style_select], outputs=[style_op_status, style_select])
+
+            # Sub-tab: Bảo mật
+            with gr.Tab("Bảo mật"):
+                gr.Markdown("#### Quản lý Mật khẩu cho phần Cài đặt hệ thống")
+                gr.Markdown("Nếu để trống mật khẩu mới, hệ thống sẽ gỡ bỏ bảo vệ mật khẩu.")
+                
+                with gr.Row():
+                    with gr.Column(scale=1):
+                        security_old_pwd = gr.Textbox(label="Mật khẩu cũ (để trống nếu chưa cài)", type="password")
+                        security_new_pwd = gr.Textbox(label="Mật khẩu mới", type="password")
+                        security_confirm_pwd = gr.Textbox(label="Xác nhận mật khẩu mới", type="password")
+                
+                        security_save_btn = gr.Button("Lưu mật khẩu", variant="primary")
+                        security_status = gr.Textbox(label="Trạng thái", interactive=False)
+                
+                def on_security_save(old_pwd, new_pwd, confirm_pwd):
+                    if new_pwd != confirm_pwd:
+                        return "❌ Mật khẩu xác nhận không khớp!"
+                    success, msg = set_password(old_pwd, new_pwd)
+                    return ("✅ " if success else "❌ ") + msg
+                    
+                security_save_btn.click(fn=on_security_save, inputs=[security_old_pwd, security_new_pwd, security_confirm_pwd], outputs=[security_status])
+

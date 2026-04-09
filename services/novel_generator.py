@@ -192,7 +192,8 @@ class NovelGenerator:
         total_chapters: int,
         character_setting: str,
         world_setting: str,
-        plot_idea: str
+        plot_idea: str,
+        custom_outline_prompt: str = ""
     ) -> Tuple[str, str]:
         """
         Tạo dàn ý tiểu thuyết
@@ -228,12 +229,15 @@ class NovelGenerator:
                     sub_genre_details.append(f"- {sg}")
             style_desc += f"\n\nCác chủ đề con (Tag) bổ sung:\n" + "\n".join(sub_genre_details) + "\n\nHãy kết hợp chặt chẽ các đặc điểm của những chủ đề này để làm phong phú cấu trúc cốt truyện."
         
+        custom_prompt_str = f"Yêu cầu chuyên biệt của tác giả:\n{custom_outline_prompt}\n\n" if custom_outline_prompt.strip() else ""
+
         prompt = t("prompts.outline_user",
             genre=genre, title=title,
             character_setting=character_setting,
             world_setting=world_setting,
             plot_idea=plot_idea,
             style_desc=style_desc,
+            custom_prompt=custom_prompt_str,
             total_chapters=total_chapters
         )
         
@@ -424,12 +428,8 @@ class NovelGenerator:
         if context_summary:
             context_prompt = t("prompts.context_prompt", context_summary=context_summary)
 
-        # Lấy thông tin thể loại truyện thông qua class properties (cần get từ CSDL dự án hoặc cấu hình, mượn tạm cách try-except)
-        # Vì hàm `generate_chapter` ko truyền `genre`, ta sẽ thêm tham số hoặc ngầm hiểu thông qua plot/world_setting. 
-        # Tạm thời cứ gán thêm nếu có thể, hoặc yêu cầu truyền thêm `genre` ở hàm gọi. Sẽ cập nhật `system_prompt` chung với outline.
-        genre_desc_prompt = ""
-        # TODO: Sắp tới cần update file `app.py` chỗ gọi hàm `generate_chapter` để truyền thêm Genre vào.
         
+
         prompt = t("prompts.chapter_user",
             novel_title=novel_title, chapter_num=chapter_num,
             chapter_title=chapter_title, chapter_desc=chapter_desc,
@@ -611,7 +611,6 @@ class NovelGenerator:
         # Cơ chế thử lại: thử lại khi nội dung quá ngắn
         max_retries = 3
         content = ""
-        success_msg = ""
 
         for attempt in range(max_retries):
             logger.debug(f"Rewrite attempt {attempt + 1}/{max_retries}")
@@ -754,7 +753,6 @@ class NovelGenerator:
         # Cơ chế thử lại: thử lại khi nội dung quá ngắn
         max_retries = 3
         content = ""
-        success_msg = ""
 
         for attempt in range(max_retries):
             logger.debug(f"Polish attempt {attempt + 1}/{max_retries}")
@@ -969,7 +967,6 @@ class NovelGenerator:
         # Cơ chế thử lại
         max_retries = 3
         content = ""
-        success_msg = ""
 
         for attempt in range(max_retries):
             logger.debug(f"Continue attempt {attempt + 1}/{max_retries}")

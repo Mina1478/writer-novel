@@ -1,4 +1,4 @@
-# Dockerfile cho công cụ sáng tác tiểu thuyết AI
+# Dockerfile cho TiniX Story 1.0
 # Dựa trên image chính thức của Python 3.11
 FROM python:3.11-slim
 
@@ -14,28 +14,22 @@ ENV PYTHONPATH=/app
 RUN apt-get update && apt-get install -y \
     build-essential \
     curl \
-    git \
     && rm -rf /var/lib/apt/lists/*
 
 # Sao chép tệp dependencies
 COPY requirements.txt .
-COPY requirements-dev.txt .
 
 # Cài đặt dependencies Python
 RUN pip install --no-cache-dir -r requirements.txt
-RUN pip install --no-cache-dir -r requirements-dev.txt
 
 # Tạo các thư mục cần thiết
-RUN mkdir -p logs cache output data backups templates project_templates plugins
+RUN mkdir -p logs data exports projects config
 
 # Sao chép mã nguồn ứng dụng
 COPY . .
 
-# Thiết lập quyền truy cập
-RUN chmod +x start.sh start.bat run.py
-
-# Expose port
-EXPOSE 8000
+# Expose ports (FastAPI: 8000, Gradio: 7860)
+EXPOSE 8000 7860
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \

@@ -227,7 +227,9 @@ class Backend:
         """Xác minh tính hợp lệ của cấu hình"""
         if not self.name or not self.name.strip():
             return False, t("config.backend_name_empty")
-        if self.type not in ["ollama", "openai", "claude", "other"]:
+        # Accepted types: all keys from API_PROVIDERS + legacy types
+        valid_types = set(API_PROVIDERS.keys()) | {"ollama", "openai", "claude", "other"}
+        if self.type not in valid_types:
             return False, t("config.unsupported_type", type=self.type)
         if not self.base_url or not self.base_url.strip().startswith(("http://", "https://")):
             return False, t("config.base_url_invalid")

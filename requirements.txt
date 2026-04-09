@@ -1,8 +1,13 @@
-# Công cụ sáng tác tiểu thuyết AI Pro - Dependencies cốt lõi
+# TiniX Story 1.0 - Core Dependencies
 gradio>=4.0.0
 pandas>=2.0.0
 openai>=1.0.0
 python-docx>=1.0.0
+
+# FastAPI server
+fastapi>=0.100.0
+uvicorn[standard]>=0.20.0
+pydantic>=2.0.0
 
 # Dependencies tùy chọn (Sử dụng cho phân tích file)
 PyMuPDF>=1.23.0  # Hỗ trợ PDF

@@ -109,6 +109,11 @@ def build_create_tab():
                         suggest_plot_status = gr.Textbox(show_label=False, interactive=False, visible=False)
 
         with gr.Accordion("📝 3. Dàn ý truyện", open=False):
+            custom_outline_prompt = gr.Textbox(
+                label="Yêu cầu riêng/Chỉ dẫn bổ sung cho Dàn ý (Tùy chọn)",
+                placeholder="VD: Không có nữ chính, kết cục mở, nvc là người tu ma nhưng tính cách hài hước...",
+                lines=2, interactive=False
+            )
             with gr.Row():
                 total_chapters = gr.Number(
                     label=t("create.chapter_count"), value=20, minimum=1, maximum=200, step=1, scale=1, interactive=False
@@ -202,12 +207,12 @@ def build_create_tab():
                 traceback.print_exc()
                 yield gr.update(), gr.update(value=f"❌ Lỗi: {str(e)}", visible=True), gr.update(interactive=True)
 
-        def on_generate_outline(title, genre, sub_genres, num_chapters, char_setting, world_setting, plot_idea, progress=gr.Progress()):
+        def on_generate_outline(title, genre, sub_genres, num_chapters, char_setting, world_setting, plot_idea, custom_outline, progress=gr.Progress()):
             progress(0.1, desc="Đang gọi AI...")
             gen = app_state.get_generator()
             content, msg = gen.generate_outline(
                 title, genre, sub_genres or [],
-                int(num_chapters), char_setting, world_setting, plot_idea
+                int(num_chapters), char_setting, world_setting, plot_idea, custom_outline
             )
             return content, msg
 
@@ -350,7 +355,7 @@ def build_create_tab():
         )
         generate_outline_btn.click(
             fn=on_generate_outline,
-            inputs=[title_input, genre_dropdown, sub_genre_dropdown, total_chapters, character_input, world_input, plot_input],
+            inputs=[title_input, genre_dropdown, sub_genre_dropdown, total_chapters, character_input, world_input, plot_input, custom_outline_prompt],
             outputs=[outline_output, outline_status],
             show_progress="full"
         )
@@ -400,10 +405,11 @@ def build_create_tab():
         plot_input.change(
             fn=lambda p: [
                 gr.update(interactive=bool(p)), 
+                gr.update(interactive=bool(p)),
                 gr.update(interactive=bool(p))
             ],
             inputs=[plot_input],
-            outputs=[total_chapters, generate_outline_btn]
+            outputs=[total_chapters, custom_outline_prompt, generate_outline_btn]
         )
         
         outline_output.change(
