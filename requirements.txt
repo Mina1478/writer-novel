@@ -1,15 +1,10 @@
-# TiniX Story 1.0 - Core Dependencies
+# TiniX Story - Production dependencies
 gradio>=4.0.0
 pandas>=2.0.0
 openai>=1.0.0
 python-docx>=1.0.0
 
-# FastAPI server
-fastapi>=0.100.0
-uvicorn[standard]>=0.20.0
-pydantic>=2.0.0
-
-# Dependencies tùy chọn (Sử dụng cho phân tích file)
-PyMuPDF>=1.23.0  # Hỗ trợ PDF
-ebooklib>=0.18  # Hỗ trợ EPUB
-beautifulsoup4>=4.12.0  # Hỗ trợ EPUB
+# File parsing support
+PyMuPDF>=1.23.0
+ebooklib>=0.18
+beautifulsoup4>=4.12.0
