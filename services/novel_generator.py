@@ -247,7 +247,7 @@ class NovelGenerator:
         ]
         
         logger.info(f"Start generating outline: {title}")
-        success, content = self.api_client.generate(messages, use_cache=True)
+        success, content = self.api_client.generate_for_simple(messages, use_cache=True)
         
         if not success:
             logger.error(f"Outline generation failed: {content}")
@@ -287,7 +287,7 @@ class NovelGenerator:
         ]
         
         logger.info(f"Start generating title suggestions for genre: {genre}")
-        success, content = self.api_client.generate(messages, use_cache=False)
+        success, content = self.api_client.generate_for_simple(messages, use_cache=False)
         
         if not success:
             logger.error(f"Title suggestion generation failed: {content}")
@@ -357,7 +357,7 @@ class NovelGenerator:
         ]
         
         logger.info(f"Start generating {logger_msg} suggestions for: {title}")
-        success, content = self.api_client.generate(messages, use_cache=False)
+        success, content = self.api_client.generate_for_simple(messages, use_cache=False)
         
         if not success:
             logger.error(f"Suggestion generation failed: {content}")
@@ -455,7 +455,7 @@ class NovelGenerator:
         logger.info(f"Start generating chapter: {chapter_num} - {chapter_title}")
         if context_summary:
             logger.info(f"Using context enhancement, context length: {len(context_summary)}")
-        success, content = self.api_client.generate(messages, use_cache=False)
+        success, content = self.api_client.generate_for_chapter(messages, use_cache=False)
 
         if not success:
             logger.error(f"Chapter generation failed: {content}")
@@ -470,7 +470,7 @@ class NovelGenerator:
                 {"role": "system", "content": reflection_sys},
                 {"role": "user", "content": reflection_prompt}
             ]
-            success, final_content = self.api_client.generate(reflection_messages, use_cache=False)
+            success, final_content = self.api_client.generate_for_chapter(reflection_messages, use_cache=False)
             if not success:
                 logger.error(f"Reflection generation failed: {final_content}. Falling back to draft content.")
             else:
